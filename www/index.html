@@ -8,6 +8,7 @@
   <script src="lib/onsenui/js/onsenui.min.js"></script>
 
   <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
@@ -16,18 +17,15 @@
     ons.ready(function() {
       console.log("Onsen UI is ready!");
     });
-
     document.addEventListener('show', function(event) {
       var page = event.target;
       var titleElement = document.querySelector('#toolbar-title');
-
       if (page.matches('#first-page')) {
-        titleElement.innerHTML = 'My app - Page 1';
+        titleElement.innerHTML = 'Calculadora';
       } else if (page.matches('#second-page')) {
-        titleElement.innerHTML = 'My app - Page 2';
+        titleElement.innerHTML = 'Calculadora Cientifica';
       }
     });
-
     if (ons.platform.isIPhoneX()) {
       document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
       document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
@@ -40,27 +38,88 @@
       <div class="center" id="toolbar-title"></div>
     </ons-toolbar>
     <ons-tabbar position="auto">
-      <ons-tab label="Tab 1" page="tab1.html" active>
+      <ons-tab label="Padrão" page="tab1.html" active>
       </ons-tab>
-      <ons-tab label="Tab 2" page="tab2.html">
+      <ons-tab label="Cientifica" page="tab2.html">
       </ons-tab>
     </ons-tabbar>
   </ons-page>
 
   <ons-template id="tab1.html">
     <ons-page id="first-page">
-      <p style="text-align: center;">
-        This is the first page.
-      </p>
+      <h3 style="text-align: center;">
+        Faça a operação desejada
+      </h3>
+      <div class="col-md-12">
+        <div class="visor">
+          <input type="number" class="form-control" id="tela" readonly>
+        </div>
+      </div>
+      <div class="botoes">
+        <div class="col-xs-4">
+          <button type="button" id="one" value="1" onclick="transfereOne()"> 1 </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="2"> 2 </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="3"> 3 </button>
+        </div>
+      </div>
+      <div class="botoes">
+        <div class="col-xs-4">
+          <button type="button" id="one" value="4" onclick="transfereOne()"> 4 </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="5"> 5 </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="6"> 6 </button>
+        </div>
+      </div>
+      <div class="botoes">
+        <div class="col-xs-4">
+          <button type="button" id="one" value="7" onclick="transfereOne()"> 7 </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="8"> 8 </button>
+        </div>
+        <div class="col-xs-4">
+          <button id="9"> 9 </button>
+        </div>
+      </div>
+       <div class="botoes">
+        <div class="col-xs-4">
+          <button type="button"> + </button>
+        </div>
+        <div class="col-xs-4">
+          <button type="button"> - </button>
+        </div>
+        <div class="col-xs-4">
+          <button type="button"> * </button>
+        </div>
+      </div>
+        <div class="botoes">
+        <div class="col-xs-4">
+          <button type="button"> / </button>
+        </div>
+        <div class="col-xs-4">
+          <button type="button"> = </button>
+        </div>
+        <div class="col-xs-4">
+          <button type="button" class="btn btn-primary btn-lg"> C </button>
+        </div>
+      </div>
     </ons-page>
   </ons-template>
 
   <ons-template id="tab2.html">
     <ons-page id="second-page">
-      <p style="text-align: center;">
-        This is the second page.
-      </p>
+      <h3 style="text-align: center;">
+        Faça a operação desejada
+      </h3>
     </ons-page>
   </ons-template>
+  <script src="components/calc.js"></script>
 </body>
 </html>

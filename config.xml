@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget xmlns="http://www.w3.org/ns/widgets" id="com.example.helloworld" version="1.0.0">
   <name>Minimum Template</name>
-  <description/>
+  <description>Made with Monaca (http://monaca.mobi)</description>
   <author/>
   <content src="index.html"/>
   <access origin="*"/>
@@ -91,4 +91,6 @@
     <icon src="/res/electron/icon/icon_electron_512.png" width="512" height="512"/>
     <splash src="/res/electron/screen/electron_splash_image.png" width="620" height="300"/>
   </platform>
+  <preference name="WindowsStorePublisherName" value="My Name"/>
+  <preference name="WindowsStoreIdentityName" value="9ae2d730-bd2a-44dc-3cba-8dbcdf723e7a"/>
 </widget>

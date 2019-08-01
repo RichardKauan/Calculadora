@@ -1,2 +1,14 @@
-/**/
-
+.visor{
+ margin-bottom: 11px;
+}
+button {
+  margin-top: 7px;
+  margin-left: 12px;  
+  margin-right: 12px;
+   background: #f54242;
+   padding: 25px 45px;
+   color: white;
+   font-size: 24px;
+   font-family: Georgia, Serif;
+   vertical-align: middle;
+   }
