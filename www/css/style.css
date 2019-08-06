@@ -1,14 +1,34 @@
+label{
+  text-align: center;
+}
+
 .visor{
  margin-bottom: 11px;
 }
-button {
-  margin-top: 7px;
-  margin-left: 12px;  
-  margin-right: 12px;
-   background: #f54242;
-   padding: 25px 45px;
+button{
+   font-size:0.875em;
+      display:block;
+      left:-60px;
+      margin-top:35px;
+      width:100%;
+}
+
+utton{
+   width: 250px;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  padding: 15px 15px;
+}
+utton {
+   background: black;
+   width: 100%;
+   height: 100%;
    color: white;
-   font-size: 24px;
+   font-size: 100px;
    font-family: Georgia, Serif;
    vertical-align: middle;
    }
+
+   
+
